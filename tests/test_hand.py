@@ -121,4 +121,20 @@ class HandTest(unittest.TestCase):
             "Flush"
         )
 
-# python3 -m unittest discover tests
+    def test_full_house_is_best_rank(self):
+        cards = [
+            Card(rank = "3", suit = "Clubs"),
+            Card(rank = "3", suit = "Hearts"),
+            Card(rank = "3", suit = "Spades"),
+            Card(rank = "9", suit = "Diamonds"),
+            Card(rank = "9", suit = "Spades")
+        ]
+
+        hand = Hand(cards = cards)
+
+        self.assertEqual(
+            hand.best_rank(),
+            "Full House"
+        )
+
+# python3 -m unittest discover tests Card(rank = "", suit = "")
