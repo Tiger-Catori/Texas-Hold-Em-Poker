@@ -172,20 +172,20 @@ class HandTest(unittest.TestCase):
         )
 
 
-        def test_royal_flush_is_best_rank(self):
-            cards = [
-                Card(rank = "10", suit = "Clubs"),
-                Card(rank = "Jack", suit = "Clubs"),
-                Card(rank = "Queen", suit = "Clubs"),
-                Card(rank = "King", suit = "Clubs"),
-                Card(rank = "Ace", suit = "Clubs")
-            ]
+    def test_royal_flush_is_best_rank(self):
+        cards = [
+            Card(rank = "10", suit = "Clubs"),
+            Card(rank = "Jack", suit = "Clubs"),
+            Card(rank = "Queen", suit = "Clubs"),
+            Card(rank = "King", suit = "Clubs"),
+            Card(rank = "Ace", suit = "Clubs")
+        ]
 
-            hand = Hand(cards = cards)
+        hand = Hand(cards = cards)
 
-            self.assertEqual(
-                hand.best_rank(),
-                "Royal Flush"
-            )
+        self.assertEqual(
+            hand.best_rank(),
+            "Royal Flush"
+        )
 
 # python3 -m unittest discover tests Card(rank = "", suit = "")
